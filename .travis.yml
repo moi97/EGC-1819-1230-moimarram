@@ -19,3 +19,9 @@ script:
 - cp travis_local_settings.py local_settings.py
 - coverage run --branch --source=. ./manage.py test
   --keepdb
+deploy:
+  provider: heroku
+  app: apppruebamoi97
+  strategy: git
+  api_key:
+    secure: wx2cYcZVJ0kZgMO2XGVU/3kzNrIK0ir4UdJyP6BZh3KDgcTwu8gUDYOgdIsTYVuTAWxRvpOKTMEQxrko1UcSwbUJt1Vl/da6ExZcn2Clzg/nnl7x2TmYOmW0AOBBczSm9brB9KulWU5c5SpkDtK4X26JB2ShHAc7aVmCvPluHRJi7PxHh6D7ETh2Rfts/L968Fz2lZsce6Hgep9cKAdAOrmYxawzDJw6VVmXTOBWUj0CnqF76o/L3IJhnFHIrPDIas13vG9izzVYZSrysARQ3htzmXCdJ8T0RXHyj/n1SdUgDTE8/cuekuZO8cTQTa/o4TDjzRBIYFPtn49g54Fd3cB+x9TM2naFSj553Hk73fdqYoW9dGGxuMyN4blnUAv3AfQfXjqkoYYPJpMfMHCZPqZnPgO4FmpjprFIDL1zJkxNRaR0iD3/fyxro3EcSqvZh2XTyk0jVWx1oIXsPx7mtlOiQ3p6FCE4RVT1FnGIrZ4uQdOJ2mEx8HruFWf7CQ3EkFw0ye+6HJnGOfXNkdFfCPHAvGQxtnHhJ1UdtB2T4+B5/4eo+8+FV8epOW9sODAcO8noc2CLNMKiN55vz7U6NcEgJNfpIwUgk0nRtq9OzJe9gdaeWAgY38R8HuGaJBwqElJRtBWVcHijL1vccPS/n41S71qCYZGFi2NvRd3qdsw=
