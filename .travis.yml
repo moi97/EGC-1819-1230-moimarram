@@ -4,6 +4,9 @@ services:
 addons:
   postgresql: '9.4'
   chrome: stable
+branches:
+  only:
+  - master
 before_script:
 - psql -U postgres -c "create user decide password 'decide'"
 - psql -U postgres -c "create database test_decide owner decide"
